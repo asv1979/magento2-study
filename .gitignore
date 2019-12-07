@@ -70,3 +70,5 @@ atlassian*
 .DS_Store
 /update/*
 /update
+/composer.lock
+/README.md
