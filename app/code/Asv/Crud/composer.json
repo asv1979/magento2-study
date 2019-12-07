@@ -1,0 +1,26 @@
+{
+    "name": "asv/module-crud",
+    "description": "",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        },
+        {
+            "email": "asv2108@gmail.com",
+            "name": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0412\u0430\u0441\u0438\u043b\u044c\u0435\u0432"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Asv\\Crud\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
