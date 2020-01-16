@@ -73,3 +73,6 @@ atlassian*
 /update
 /composer.lock
 /README.md
+/.github
+/vendor
+/generated/code
