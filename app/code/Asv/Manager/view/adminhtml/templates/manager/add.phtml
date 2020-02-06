@@ -1,0 +1,9 @@
+<h1>Add a new manager here</h1>
+
+<form action="<?= $block->escapeUrl($block->getUrl($block->getFormAction())) ?>" method="post">
+    <label>Login</label>
+    <input name="login" type="text">
+    <label>Department</label>
+    <input name="department" type="text">
+    <input type="submit" value="Add the manager ">
+</form>

@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">
+                asv_manager_manager_listing.asv_manager_manager_listing_data_source
+            </item>
+        </item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/add"/>
+                <class>primary</class>
+                <label translate="true">Add New Manager</label>
+            </button>
+        </buttons>
+        <spinner>asv_manager_manager_columns</spinner>
+        <deps>
+            <dep>asv_manager_manager_listing.asv_manager_manager_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource component="Magento_Ui/js/grid/provider" name="asv_manager_manager_listing_data_source">
+        <settings>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Asv_Manager::Manager</aclResource>
+        <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"
+                      name="asv_manager_manager_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>manager_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <filters name="listing_filters"/>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="asv_manager_manager_columns">
+        <selectionsColumn name="ids">
+            <settings>
+                <indexField>manager_id</indexField>
+            </settings>
+        </selectionsColumn>
+        <column name="manager_id">
+            <settings>
+                <filter>text</filter>
+                <sorting>asc</sorting>
+                <label translate="true">ID</label>
+            </settings>
+        </column>
+        <column name="login">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">login</label>
+            </settings>
+        </column>
+        <column name="department">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">department</label>
+            </settings>
+        </column>
+    </columns>
+</listing>

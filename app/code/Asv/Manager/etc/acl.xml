@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Asv_Manager::Manager" sortOrder="10" title="Manager">
+					<resource id="Asv_Manager::Manager_save" sortOrder="10" title="Save Manager"/>
+					<resource id="Asv_Manager::Manager_delete" sortOrder="20" title="Delete Manager"/>
+					<resource id="Asv_Manager::Manager_update" sortOrder="30" title="Update Manager"/>
+					<resource id="Asv_Manager::Manager_view" sortOrder="40" title="View Manager"/>
+				</resource>
+				<resource id="Asv_Manager::asv_manager" sortOrder="10" title="asv manager">
+					<resource id="Asv_Manager::index_index" sortOrder="10" title="index index"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

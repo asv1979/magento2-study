@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table comment="asv_manager Table" engine="innodb" name="custom_manager" resource="default">
+        <column comment="Entity Id" identity="true" name="manager_id" nullable="false" padding="6" unsigned="false"
+                xsi:type="smallint"/>
+        <constraint referenceId="PRIMARY" xsi:type="primary">
+            <column name="manager_id"/>
+        </constraint>
+        <column name="login" nullable="true" xsi:type="text"/>
+        <column name="department" nullable="true" xsi:type="text"/>
+    </table>
+</schema>
